@@ -64,7 +64,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'GitHub Repository',
                 icon: Icons.code,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager',
+                  'https://github.com/prashant4900/env_manager',
                 ),
               ),
             ],
@@ -81,7 +81,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'View Source Code',
                 icon: Icons.open_in_new,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager',
+                  'https://github.com/prashant4900/env_manager',
                 ),
               ),
               _buildClickableTile(
@@ -89,7 +89,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'View License',
                 icon: Icons.article_outlined,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager/blob/main/LICENSE',
+                  'https://github.com/prashant4900/env_manager/blob/main/LICENSE',
                 ),
               ),
               _buildClickableTile(
@@ -112,7 +112,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'Help & Documentation',
                 icon: Icons.help_center_outlined,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager',
+                  'https://github.com/prashant4900/env_manager',
                 ),
               ),
               _buildClickableTile(
@@ -126,7 +126,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'Report an Issue',
                 icon: Icons.bug_report_outlined,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager/issues',
+                  'https://github.com/prashant4900/env_manager/issues',
                 ),
               ),
             ],
@@ -143,7 +143,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'MIT License',
                 icon: Icons.copyright,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager/blob/main/LICENSE',
+                  'https://github.com/prashant4900/env_manager/blob/main/LICENSE',
                 ),
               ),
               _buildClickableTile(
@@ -157,7 +157,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'Code of Conduct',
                 icon: Icons.groups,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager/blob/main/CODE_OF_CONDUCT.md',
+                  'https://github.com/prashant4900/env_manager/blob/main/CODE_OF_CONDUCT.md',
                 ),
               ),
               _buildClickableTile(
@@ -165,7 +165,7 @@ class _MySettingPageState extends State<MySettingPage> {
                 title: 'Contribution Guidelines',
                 icon: Icons.handshake,
                 onTap: () => _launchURL(
-                  'https://github.com/prashantnigam490/env_manager/blob/main/CONTRIBUTING.md',
+                  'https://github.com/prashant4900/env_manager/blob/main/CONTRIBUTING.md',
                 ),
               ),
             ],
