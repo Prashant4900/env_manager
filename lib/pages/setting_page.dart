@@ -40,90 +40,93 @@ class _MySettingPageState extends State<MySettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
-        children: [
-          Text(
-            'Settings',
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.w600,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Settings',
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
             ),
-          ),
-          SizedBox(height: 24.h),
-          // App Info Section
-          _buildSection(
-            context,
-            title: 'About',
-            icon: Icons.info_outline,
-            children: [
-              _buildInfoRow('Version', _appVersion),
-              _buildInfoRow('Developer', 'Prashant Nigam'),
-              _buildInfoRow('Build', '2025-11-06'),
-            ],
-          ),
+            SizedBox(height: 24.h),
+            // App Info Section
+            _buildSection(
+              context,
+              title: 'About',
+              icon: Icons.info_outline,
+              children: [
+                _buildInfoRow('Version', _appVersion),
+                _buildInfoRow('Developer', 'Prashant Nigam'),
+                _buildInfoRow('Build', '2025-11-06'),
+              ],
+            ),
 
-          // Open Source Section
-          _buildSection(
-            context,
-            title: 'Open Source',
-            icon: Icons.engineering,
-            children: [
-              _buildClickableTile(
-                context,
-                title: 'View Source Code',
-                icon: Icons.open_in_new,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager',
+            // Open Source Section
+            _buildSection(
+              context,
+              title: 'Open Source',
+              icon: Icons.engineering,
+              children: [
+                _buildClickableTile(
+                  context,
+                  title: 'View Source Code',
+                  icon: Icons.open_in_new,
+                  onTap: () => _launchURL(
+                    'https://github.com/prashant4900/env_manager',
+                  ),
                 ),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'View License',
-                icon: Icons.article_outlined,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager/blob/main/LICENSE',
+                _buildClickableTile(
+                  context,
+                  title: 'View License',
+                  icon: Icons.article_outlined,
+                  onTap: () => _launchURL(
+                    'https://github.com/prashant4900/env_manager/blob/main/LICENSE',
+                  ),
                 ),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'View Dependencies',
-                icon: Icons.list_alt,
-                onTap: () => showLicensePage(context: context),
-              ),
-            ],
-          ),
+                _buildClickableTile(
+                  context,
+                  title: 'View Dependencies',
+                  icon: Icons.list_alt,
+                  onTap: () => showLicensePage(context: context),
+                ),
+              ],
+            ),
 
-          // Support Section
-          _buildSection(
-            context,
-            title: 'Support',
-            icon: Icons.help_outline,
-            children: [
-              _buildClickableTile(
-                context,
-                title: 'Help & Documentation',
-                icon: Icons.help_center_outlined,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager',
+            // Support Section
+            _buildSection(
+              context,
+              title: 'Support',
+              icon: Icons.help_outline,
+              children: [
+                _buildClickableTile(
+                  context,
+                  title: 'Help & Documentation',
+                  icon: Icons.help_center_outlined,
+                  onTap: () => _launchURL(
+                    'https://github.com/prashant4900/env_manager',
+                  ),
                 ),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'Send Feedback',
-                icon: Icons.feedback_outlined,
-                onTap: () => _launchURL('mailto:prashantnigam490@gmail.com'),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'Report an Issue',
-                icon: Icons.bug_report_outlined,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager/issues',
+                _buildClickableTile(
+                  context,
+                  title: 'Send Feedback',
+                  icon: Icons.feedback_outlined,
+                  onTap: () => _launchURL('mailto:prashantnigam490@gmail.com'),
                 ),
-              ),
-            ],
-          ),
-        ],
+                _buildClickableTile(
+                  context,
+                  title: 'Report an Issue',
+                  icon: Icons.bug_report_outlined,
+                  onTap: () => _launchURL(
+                    'https://github.com/prashant4900/env_manager/issues',
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

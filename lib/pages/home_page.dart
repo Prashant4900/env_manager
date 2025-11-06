@@ -3,6 +3,7 @@ import 'package:env_manager/pages/environment_page.dart';
 import 'package:env_manager/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,6 +14,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+  String _appVersion = '1.0.0';
 
   final List<NavItem> _navItems = [
     NavItem(
@@ -26,6 +28,23 @@ class _MyHomePageState extends State<MyHomePage> {
       page: const MySettingPage(),
     ),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadAppVersion();
+  }
+
+  Future<void> _loadAppVersion() async {
+    try {
+      final packageInfo = await PackageInfo.fromPlatform();
+      setState(() {
+        _appVersion = 'v${packageInfo.version} (${packageInfo.buildNumber})';
+      });
+    } catch (e) {
+      debugPrint('Failed to load app version: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: EdgeInsets.all(24.w),
                   child: Text(
-                    'v1.0.0',
+                    _appVersion,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: Theme.of(
                         context,
