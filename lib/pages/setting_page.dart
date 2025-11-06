@@ -59,14 +59,6 @@ class _MySettingPageState extends State<MySettingPage> {
               _buildInfoRow('Version', _appVersion),
               _buildInfoRow('Developer', 'Prashant Nigam'),
               _buildInfoRow('Build', '2025-11-06'),
-              _buildClickableTile(
-                context,
-                title: 'GitHub Repository',
-                icon: Icons.code,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager',
-                ),
-              ),
             ],
           ),
 
@@ -131,58 +123,6 @@ class _MySettingPageState extends State<MySettingPage> {
               ),
             ],
           ),
-
-          // Legal Section
-          _buildSection(
-            context,
-            title: 'Legal',
-            icon: Icons.gavel_outlined,
-            children: [
-              _buildClickableTile(
-                context,
-                title: 'MIT License',
-                icon: Icons.copyright,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager/blob/main/LICENSE',
-                ),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'Third-Party Licenses',
-                icon: Icons.article_outlined,
-                onTap: () => showLicensePage(context: context),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'Code of Conduct',
-                icon: Icons.groups,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager/blob/main/CODE_OF_CONDUCT.md',
-                ),
-              ),
-              _buildClickableTile(
-                context,
-                title: 'Contribution Guidelines',
-                icon: Icons.handshake,
-                onTap: () => _launchURL(
-                  'https://github.com/prashant4900/env_manager/blob/main/CONTRIBUTING.md',
-                ),
-              ),
-            ],
-          ),
-
-          // Footer
-          // Padding(
-          //   padding: EdgeInsets.symmetric(vertical: 24.h),
-          //   child: Center(
-          //     child: Text(
-          //       ' Env Manager',
-          //       style: Theme.of(context).textTheme.bodySmall?.copyWith(
-          //         color: Theme.of(context).colorScheme.onSurfaceVariant,
-          //       ),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
